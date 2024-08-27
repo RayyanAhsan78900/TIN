@@ -123,7 +123,7 @@ def index():
                 plt.plot(pd.date_range(start=df['ds'].iloc[-1], periods=prediction_days + 1, freq='D')[1:], arima_pred,
                          label='ARIMA Forecast')
                 plt.fill_between(pd.date_range(start=df['ds'].iloc[-1], periods=prediction_days + 1, freq='D')[1:],
-                                 arima_conf_int.iloc[:, 0], arima_conf_int.iloc[:, 1], color='pink', alpha.=0.3)
+                                 arima_conf_int.iloc[:, 0], arima_conf_int.iloc[:, 1], color='pink', alpha=0.3)
                 plt.legend()
                 plt.title('ARIMA Forecast')
                 plt.xlabel('Date')
